@@ -1,0 +1,7 @@
+C:\Users\Иван\Desktop\prakt_1\prakt_1\bin\Debug\prakt_1.exe.config
+E:\ZoOm_\Музыка и прочее\Library\универ\C#\prakt_1\prakt_1\bin\Debug\prakt_1.exe.config
+E:\ZoOm_\Музыка и прочее\Library\универ\C#\prakt_1\prakt_1\bin\Debug\prakt_1.exe
+E:\ZoOm_\Музыка и прочее\Library\универ\C#\prakt_1\prakt_1\bin\Debug\prakt_1.pdb
+E:\ZoOm_\Музыка и прочее\Library\универ\C#\prakt_1\prakt_1\obj\Debug\prakt_1.csprojResolveAssemblyReference.cache
+E:\ZoOm_\Музыка и прочее\Library\универ\C#\prakt_1\prakt_1\obj\Debug\prakt_1.exe
+E:\ZoOm_\Музыка и прочее\Library\универ\C#\prakt_1\prakt_1\obj\Debug\prakt_1.pdb
