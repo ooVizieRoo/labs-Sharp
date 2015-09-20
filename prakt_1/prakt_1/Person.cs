@@ -11,19 +11,26 @@ namespace prakt_1
         object DeepCopy();
         DateTime Date { get; set; }
     }
-
-    class Person
+    
+    enum Education
     {
-        private string Name;
-        private string Family;
-        private DateTime BirthDate;
+        Specialist = 0,
+        Bachelor,
+        SecondEducation
+    }
+
+    class Person : IDateAndCopy
+    {
+        protected string Name;
+        protected string Family;
+        protected DateTime BirthDate;
         #region Конструкторы
         //Конструктор по умолчанию
         public Person()
         {
             Name = "Noname";
             Family = "Nofamily";
-            BirthDate = new DateTime(1995,1,1);
+            BirthDate = new DateTime(1995, 1, 1);
         }
 
         //Конструктор с параметрами
@@ -60,7 +67,7 @@ namespace prakt_1
             }
         }
 
-        public DateTime AccessDate
+        public DateTime Date
         {
             set
             {
@@ -85,7 +92,7 @@ namespace prakt_1
                 return BirthDate.Year;
             }
         }
-#endregion
+        #endregion
 
         #region Вывод  значений полей класса
         //Всех
@@ -127,6 +134,17 @@ namespace prakt_1
         public override int GetHashCode()
         {
             return this.ToString().GetHashCode();
+        }
+
+        public virtual object DeepCopy()
+        {
+            Person copy = new Person();
+
+            copy.Name = this.Name;
+            copy.Family = this.Family;
+            copy.BirthDate = this.BirthDate;
+
+            return copy;
         }
     }
 }
