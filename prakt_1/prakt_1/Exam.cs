@@ -50,7 +50,7 @@ namespace prakt_1
 
         public override string ToString()
         {
-            return "ItemName: " + ItemName + "; Mark: " + Mark + "; DateExam: " + Date;
+            return ItemName + "; " + Mark + "; " + Date + "; ";
         }
 
         public virtual object DeepCopy()

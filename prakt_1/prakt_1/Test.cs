@@ -42,6 +42,10 @@ namespace prakt_1
         }
         #endregion
 
+        public override string ToString()
+        {
+            return ItemName.ToString() + "; " + Passed.ToString() + "; " + Date.ToString() + "; ";
+        }
         public virtual object DeepCopy()
         {
             Test t = new Test(ItemName, Passed);
