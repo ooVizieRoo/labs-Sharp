@@ -15,21 +15,20 @@ namespace prakt_1
         private Exam[] passedEx;
 
         #region Свойства
-        Person person
+        public Person person
         {
             get 
-            { 
-                return person; 
+            {
+                return new Person(this.AccessName, this.AccessFamily, this.Date);
             }
             set
             {
-                person = value;
                 this.Name = value.AccessName;
                 this.Family = value.AccessFamily;
                 this.Date = value.Date;
             }
         }
-        ArrayList accessTest
+        public ArrayList accessTest
         {
             get
             {
@@ -41,7 +40,7 @@ namespace prakt_1
                 passedTest = value;
             }
         }
-        Exam[] accessExam
+        public Exam[] accessExam
         {
             get
             {
@@ -57,7 +56,11 @@ namespace prakt_1
         {
             get
             {
+                if (passedEx == null)
+                    return 0;
+
                 int sum = 0;
+
                 foreach (Exam exam in passedEx)
                 {
                     sum += exam.Mark;
@@ -66,7 +69,7 @@ namespace prakt_1
                 return sum / passedEx.Length;
             }
         }
-        int accessGN
+        public int accessGN
         {
             get
             {
@@ -84,7 +87,7 @@ namespace prakt_1
                 }
                 catch (Exception)
                 {
-                    Console.WriteLine();
+                    Console.WriteLine(textError);
                 }
             }
         }
@@ -115,29 +118,37 @@ namespace prakt_1
 
         public void AddTests(params Test[] aaa)
         {
+            accessTest = new ArrayList();
             foreach (Test ob in aaa)
-                passedTest.Add(ob);
+                accessTest.Add(ob);
         }
 
         public override string ToString()
         {
-            string str = "Квалификация: " + edu + "; Номер группы: " + groupNumber +"; ||| ";
-            str += "Список cданных зачетов: ";
+            string str = " ||| Квалификация: " + edu + "; Номер группы: " + groupNumber +";  ";
 
-            foreach (Test ob in passedTest)
-                str += ob.ToString();
+            if (this.passedTest != null)
+            {
+                str += "||| Список cданных зачетов: ";
 
-            str += "||| Список сданных экзаменов: ";
+                foreach (Test ob in passedTest)
+                    str += ob.ToString();
+            }
 
-            foreach (Exam ex in passedEx)
-                str += ex.ToString();
+            if (this.passedEx != null)
+            {
+                str += "||| Список сданных экзаменов: ";
+
+                foreach (Exam ex in passedEx)
+                    str += ex.ToString();
+            }
 
             return base.ToString() + str;
         }
 
         public override string ToShortString()
         {
-            string str = "Квалификация: " + edu + "; Номер группы: " + groupNumber + "; ||| ";
+            string str = " ||| Квалификация: " + edu + "; Номер группы: " + groupNumber + "; ||| ";
 
             return base.ToShortString() + str + "Средний балл: " + averageMark.ToString();
         }
@@ -146,7 +157,9 @@ namespace prakt_1
         {
             Student copy = new Student();
 
-            copy = (Student)base.DeepCopy();
+            copy.AccessName = this.AccessName;
+            copy.AccessFamily = this.AccessFamily;
+            copy.Date = this.Date;
             copy.edu = this.edu;
             copy.groupNumber = this.groupNumber;
             copy.passedTest = this.accessTest;

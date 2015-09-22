@@ -98,7 +98,7 @@ namespace prakt_1
         //Всех
         public override string ToString()
         {
-            return "Имя: " + Name.ToString() + "; Фамилия: " + Family.ToString() + "; Дата Рождения: " + BirthDate.ToString();
+            return "Имя: " + AccessName.ToString() + "; Фамилия: " + AccessFamily.ToString() + "; Дата Рождения: " + Date.ToString();
         }
 
         //Только имя и фамилия

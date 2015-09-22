@@ -35,10 +35,11 @@ namespace prakt_1
             Passed = false;
         }
 
-        public Test(string ItemName, bool Passed)
+        public Test(string ItemName, bool Passed, DateTime Date)
         {
             this.ItemName = ItemName;
             this.Passed = Passed;
+            this.Date = Date;
         }
         #endregion
 
@@ -48,7 +49,7 @@ namespace prakt_1
         }
         public virtual object DeepCopy()
         {
-            Test t = new Test(ItemName, Passed);
+            Test t = new Test(ItemName, Passed, Date);
             return t;
         }
     }
