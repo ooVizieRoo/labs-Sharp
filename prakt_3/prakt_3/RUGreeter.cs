@@ -8,9 +8,10 @@ namespace prakt_3
 {
     class RUGreeter:IGreeter 
     {
-        public string SayHello()
+        string intro = "Здорово!";
+        public void SayHello()
         {
-            return "Здорово!";
+            Console.WriteLine(intro);
         }
     }
 }

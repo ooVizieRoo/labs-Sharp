@@ -8,9 +8,10 @@ namespace prakt_3
 {
     class ENGreeter: IGreeter 
     {
-        public string SayHello()
+        string intro = "Hi!";
+        public void SayHello()
         {
-            return "Hi!";
+            Console.WriteLine(intro);
         }
     }
 }

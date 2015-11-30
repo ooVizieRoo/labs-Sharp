@@ -8,9 +8,10 @@ namespace prakt_3
 {
     class FRGreeter: IGreeter
     {
-        public string SayHello()
+        string intro = "Salut!";
+        public void SayHello()
         {
-            return "Salut!";
+            Console.WriteLine(intro);
         }
     }
 }

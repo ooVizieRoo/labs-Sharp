@@ -7,15 +7,14 @@ using System.Threading.Tasks;
 namespace prakt_3
 {
     //Адаптер уровня объктов для французского языка
-    class AdapterFR: IGreeter 
+    class AdapterGE: IGreeter 
     {
         Printer printer1 = new Printer();
-        FRGreeter frGr1 = new FRGreeter();
+        string intro = "Hallo";
 
-        public string SayHello()
+        public void SayHello()
         {
-            printer1.Print(frGr1.SayHello());
-            return "";
+            printer1.Print(intro);
         }
     }
 }

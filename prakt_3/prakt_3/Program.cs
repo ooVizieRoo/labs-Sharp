@@ -8,7 +8,7 @@ namespace prakt_3
 {
     public interface IGreeter
     {
-        string SayHello();
+        void SayHello();
     }
     public interface IService
     {
@@ -19,7 +19,7 @@ namespace prakt_3
     {
         static void Main(string[] args)
         {
-            IGreeter iGr1 = new AdapterFR(); 
+            IGreeter iGr1 = new AdapterGE(); 
             iGr1.SayHello();
             
             int n = 5;
