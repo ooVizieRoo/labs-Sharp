@@ -6,9 +6,18 @@ using System.Threading.Tasks;
 
 namespace prakt_4
 {
-    class SolidWater:IState
+    class SolidWater: State
     {
-        public void GetState()
+        public override State Cool()
+        {
+            return new SolidWater();
+        }
+
+        public override State Heat()
+        {
+            return new SolidWater();
+        }
+        public override void GetState()
         {
             Console.WriteLine("Лед");
         }

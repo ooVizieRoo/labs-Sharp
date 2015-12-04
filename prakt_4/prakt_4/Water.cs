@@ -8,59 +8,24 @@ namespace prakt_4
 {
     class Water
     {
-        IState state = null;
-        sbyte indexState;
+        public  State state = null;
 
         public Water()
         {
-            state = new LiquidWater();
-            indexState = 1;
+            state = state = new LiquidWater();
         }
         //греем воду
         public void Heat()
         {
-            indexState++;
-            ChangeState();
+            state = state.Heat();
         }
         //охлаждаем воду
         public void Cool()
         {
-            indexState--;
-            ChangeState();
+            state = state.Cool();
         }
 
-        //меняем агрегатное состояние воды
-        void ChangeState()
-        {
-            switch (indexState)
-            {
-                case 0:
-                    {
-                        state = new SolidWater();
-                        break;
-                    }
-                case 1:
-                    {
-                        state = new LiquidWater();
-                        break;
-                    }
-                case 2:
-                    {
-                        state = new GasWater();
-                        break;
-                    }
-                default:
-                    {
-                        if (indexState > 2)
-                            indexState = 2;
-
-                        if (indexState < 0)
-                            indexState = 0;
-                        break;
-                    }
-            }
-        }
-
+        //Выводим состояние на экран
         public void Print()
         {
             state.GetState();

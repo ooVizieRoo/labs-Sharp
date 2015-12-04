@@ -6,9 +6,19 @@ using System.Threading.Tasks;
 
 namespace prakt_4
 {
-    class LiquidWater: IState
+    class LiquidWater: State
     {
-        public void GetState()
+        public override State Cool()
+        {
+            return new SolidWater();
+        }
+
+        public override State Heat()
+        {
+            return new GasWater();
+
+        }
+        public override void GetState()
         {
             Console.WriteLine("Жидкость");
         }
