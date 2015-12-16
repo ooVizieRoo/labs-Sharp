@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace prakt_5
 {
-    class XIconWindow: XWindow, IconWindow
+    class AbstractBuffer
     {
+        public byte[] b;
+
+        public bool busy=false;
     }
 }

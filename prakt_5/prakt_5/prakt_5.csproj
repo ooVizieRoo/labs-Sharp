@@ -41,21 +41,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractBuffer.cs" />
+    <Compile Include="BufferFactory.cs" />
+    <Compile Include="ConcreteBuffer2b.cs" />
+    <Compile Include="ConcreteBuffer4b.cs" />
+    <Compile Include="ConcreteBuffer6b.cs" />
     <Compile Include="IconWindow.cs" />
     <Compile Include="MessageSender.cs" />
     <Compile Include="ModalWindow.cs" />
-    <Compile Include="WaylandIconWindow.cs" />
-    <Compile Include="WaylandModalWindow.cs" />
-    <Compile Include="WaylandWindow.cs" />
-    <Compile Include="Window.cs" />
+    <Compile Include="WaylandImplementor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="XIconWindow.cs" />
-    <Compile Include="XModalWIndow.cs" />
-    <Compile Include="XWindow.cs" />
+    <Compile Include="XWindowImplementor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

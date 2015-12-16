@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace prakt_5
 {
-    interface IconWindow : Window
+    class IconWIndow: Window
     {
-
     }
 }

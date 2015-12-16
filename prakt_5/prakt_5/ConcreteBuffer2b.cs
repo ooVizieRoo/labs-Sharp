@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace prakt_5
 {
-    class WaylandModalWindow : WaylandWindow, ModalWindow
+    class ConcreteBuffer2b: AbstractBuffer
     {
+        public ConcreteBuffer2b()
+        {
+            b = new byte[2];
+
+            busy = false;
+        }
     }
 }

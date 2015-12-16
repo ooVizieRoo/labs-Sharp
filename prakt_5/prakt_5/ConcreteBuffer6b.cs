@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace prakt_5
 {
-    class WaylandIconWindow : WaylandWindow, IconWindow
+    class ConcreteBuffer6b: AbstractBuffer
     {
+        public ConcreteBuffer6b()
+        {
+            b = new byte[6];
+            busy = false;
+        }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace prakt_5
 {
-    interface ModalWindow: Window
+    class ModalWindow: Window
     {
     }
 }
