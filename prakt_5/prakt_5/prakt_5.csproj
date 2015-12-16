@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="AbstractBuffer.cs" />
     <Compile Include="BufferFactory.cs" />
     <Compile Include="ConcreteBuffer2b.cs" />
@@ -53,6 +54,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="XWindowImplementor.cs" />
+=======
+    <Compile Include="MessageSender.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+>>>>>>> origin/master
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

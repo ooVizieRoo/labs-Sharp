@@ -16,11 +16,22 @@ namespace prakt_5
         interface ModalWindow : Window {}
         class XModalWIndow : XWindow, ModalWindow {}
         class WaylandModalWindow : WaylandWindow, ModalWindow {}
+<<<<<<< HEAD
      * */
 
     interface Window { }
     interface WindowImplementor : Window { }
     
+=======
+     */
+    interface Window { }
+    class IconWindow : Window { /*ссылка на WindowImplementor*/ }
+    class ModalWindow : Window { /*ссылка на WindowImplementor*/ }
+    interface WindowImplementor : Window { }
+    class XWindowImplementor : WindowImplementor { }
+    class WaylandImplementor : WindowImplementor { }
+
+>>>>>>> origin/master
 
     class Program
     {
